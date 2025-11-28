@@ -1,10 +1,11 @@
 package repositories
 
 import (
-    "fmt"
-    "gorm.io/driver/postgres"
-    "gorm.io/gorm"
-    "go/internal/config"
+	"fmt"
+	"go-test/internal/config"
+
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
 )
 
 var DB *gorm.DB

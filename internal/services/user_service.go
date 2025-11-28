@@ -1,8 +1,8 @@
 package services
 
 import (
-    "go/internal/models"
-    "go/internal/repositories"
+	"go-test/internal/models"
+	"go-test/internal/repositories"
 )
 
 func GetUserByID(id uint) (*models.User, error) {

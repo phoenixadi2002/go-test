@@ -1,13 +1,16 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    "github.com/gin-gonic/gin"
-    "go.uber.org/zap"
-    "go/internal/config"
-    "go/internal/handlers"
-    "go/internal/repositories"
+	"go-test/internal/config"
+	"go-test/internal/handlers"
+	"go-test/internal/repositories"
+
+	"go-test/internal/models"
+
+	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 )
 
 func main() {
@@ -17,7 +20,7 @@ func main() {
     defer logger.Sync()
 
     repositories.ConnectDB(cfg)
-    repositories.DB.AutoMigrate() // Add models here
+    repositories.DB.AutoMigrate(&models.User{}) // Add models here
 
     r := gin.Default()
     handlers.SetupRoutes(r, logger)

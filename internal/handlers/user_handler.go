@@ -1,12 +1,13 @@
 package handlers
 
 import (
-    "net/http"
-    "strconv"
+	"net/http"
+	"strconv"
 
-    "github.com/gin-gonic/gin"
-    "go/internal/models"
-    "go/internal/services"
+	"go-test/internal/models"
+	"go-test/internal/services"
+
+	"github.com/gin-gonic/gin"
 )
 
 func GetUser(c *gin.Context) {

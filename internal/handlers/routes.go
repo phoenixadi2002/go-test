@@ -1,9 +1,10 @@
 package handlers
 
 import (
-    "github.com/gin-gonic/gin"
-    "go.uber.org/zap"
-    "go/internal/middleware"
+	"go-test/internal/middleware"
+
+	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 )
 
 func SetupRoutes(r *gin.Engine, logger *zap.Logger) {
